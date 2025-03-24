@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"> </p>
+    <script>
+        function add(a,b)
+        {
+            obj=document.getElementById('demo')
+            obj.innerHTML=(a+b)
+        }
+        a=2
+        b=5
+        count=0
+        maxcount=10;
+        i=setInterval(function()
+        {
+        add(++a,++b);
+        count++;
+        if(count>=maxcount)
+        {
+            clearInterval(i);
+            document.write("max limit")
+        }
+    },1000)
+        </script>
+</body>
+</html>

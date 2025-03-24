@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="p1" style="font-size:50px">Hello </p>
+    <button onclick="change(1)">Increment</button>
+    <button onclick="change(-1)">decrement</button>
+    <button onclick="stopped=true">Stop</button>
+    <script>
+        let font=50,stopped=false,direction=0
+        function change(d)
+        {   
+            if(stopped)
+            {
+                direction=d;
+                stopped=false;
+                return
+            }
+            if((d>0 && font<100)||(d<0 && font>15))
+            {
+                font+=d
+                document.getElementsByClassName("p1")[0].style.fontSize=font+"px"
+                setTimeout(()=>change(d),100)
+            }
+        }
+    </script>
+</body>
+</html>

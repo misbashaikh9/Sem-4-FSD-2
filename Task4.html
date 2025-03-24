@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const obj=JSON.parse(`{"name":"xyz","age":"17","dob":"1997-03-14"}`);
+    console.log(obj.dob);
+    a = new Date(obj.dob);
+    console.log(a);
+    function call()
+    {
+        obj.dob=new Date(obj.Date)
+        document.getElementById("demo").innerHTML="Birth day of " + obj.name + " is "+obj.Date+" (India Standard Time)"
+    }
+</script>
+<p id="demo"></p>
+<button onclick="call()" class="demo">Click Me</button>
+</body>
+</html>

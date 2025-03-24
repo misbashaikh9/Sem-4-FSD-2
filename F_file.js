@@ -1,0 +1,6 @@
+var fs=require('fs')
+fs.writeFileSync('Hello.txt','How Are You?')
+var data=fs.readFileSync('Hello.txt','utf-8')
+console.log(data)
+// console.log(data.toString())
+console.log("Program Ended!")

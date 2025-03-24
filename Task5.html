@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function fromListToObject(data)
+    {
+    dic={}
+    for(i=0;i<data.length;i++)
+    {
+    data2=data[i]
+    dic[data2[0]]=data2[1]
+    }
+        return dic
+    }
+    data=[['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]]
+    var object=fromListToObject(data)
+    console.log(object)
+    </script>
+</body>
+</html>
+
+
