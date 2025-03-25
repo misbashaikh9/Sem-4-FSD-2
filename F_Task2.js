@@ -1,0 +1,11 @@
+fs=require('fs')
+var obj={'name' : 'Misba' , 'Age' : '18'}
+console.log(obj)
+var data=JSON.stringify(obj)
+//console.log(data)
+fs.writeFileSync('F_Task2.txt',data)
+d=fs.readFileSync('F_Task2.txt','UTF-8')
+console.log(d)
+obj1=JSON.parse(d)
+console.log(obj1)
+console.log('My Name is '+obj1.name + ' And Age Is '+ obj1.Age)
